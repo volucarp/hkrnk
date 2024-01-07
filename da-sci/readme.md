@@ -9,3 +9,10 @@ https://gist.github.com/yifeihuang/69dfd7fa0c6effbf46dffc2af853067e#file-paralle
 
 https://gist.github.com/yifeihuang
 
+### High Performance Python Notes:
+
+timit module is only good to runa seprate function
+
+other options:
+- using /usr/bin/time os command to run whole module
+- using cProfile module (about 50% overhead)
