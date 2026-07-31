@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_openaq_measurements
+    description: Cleaned OpenAQ measurements for New York City and Jersey City.
+    columns:
+      - name: city_name
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["New York City", "Jersey City"]
+      - name: location_id
+        tests:
+          - not_null
+      - name: sensor_id
+        tests:
+          - not_null
+      - name: measured_at_utc
+        tests:
+          - not_null
+      - name: measurement_date
+        tests:
+          - not_null
+      - name: parameter_name
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["pm25", "pm10", "no2", "o3", "so2", "co"]
+      - name: measurement_value
+        tests:
+          - not_null

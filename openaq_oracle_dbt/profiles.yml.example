@@ -1,0 +1,12 @@
+openaq_oracle:
+  target: dev
+  outputs:
+    dev:
+      type: oracle
+      user: "{{ env_var('DBT_ORACLE_USER') }}"
+      pass: "{{ env_var('DBT_ORACLE_PASSWORD') }}"
+      database: "{{ env_var('DBT_ORACLE_DATABASE') }}"
+      tns_name: "{{ env_var('DBT_ORACLE_TNS_NAME') }}"
+      schema: "{{ env_var('DBT_ORACLE_SCHEMA') }}"
+      threads: 4
+

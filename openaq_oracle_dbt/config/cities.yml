@@ -1,0 +1,16 @@
+cities:
+  - city_name: Jersey City
+    city_slug: jersey_city
+    bbox:
+      min_lon: -74.1163
+      min_lat: 40.6668
+      max_lon: -74.0280
+      max_lat: 40.7594
+  - city_name: New York City
+    city_slug: nyc
+    bbox:
+      min_lon: -74.0200
+      min_lat: 40.4774
+      max_lon: -73.7004
+      max_lat: 40.9176
+

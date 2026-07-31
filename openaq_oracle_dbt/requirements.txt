@@ -1,0 +1,5 @@
+dbt-oracle>=1.11,<1.12
+dlt[sqlalchemy]>=1.29,<2
+oracledb>=2.5
+PyYAML>=6.0
+requests>=2.32

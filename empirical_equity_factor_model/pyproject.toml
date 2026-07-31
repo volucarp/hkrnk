@@ -1,0 +1,13 @@
+[project]
+name = "empirical-equity-factor-model"
+version = "0.1.0"
+description = "Empirical equity factor return model research and analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "statsmodels>=0.14",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

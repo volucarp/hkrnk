@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: int_daily_city_parameter
+    description: Daily city and pollutant summary statistics.
+    columns:
+      - name: city_name
+        tests:
+          - not_null
+      - name: measurement_date
+        tests:
+          - not_null
+      - name: parameter_name
+        tests:
+          - not_null
+
+  - name: mart_city_air_quality_daily
+    description: Wide daily city comparison mart for common OpenAQ pollutants.
+    columns:
+      - name: city_name
+        tests:
+          - not_null
+      - name: measurement_date
+        tests:
+          - not_null
+
+  - name: mart_station_parameter_daily
+    description: Station-level daily pollutant summary table.
+    columns:
+      - name: city_name
+        tests:
+          - not_null
+      - name: location_id
+        tests:
+          - not_null
+      - name: measurement_date
+        tests:
+          - not_null
+      - name: parameter_name
+        tests:
+          - not_null
+

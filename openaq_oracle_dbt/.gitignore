@@ -1,0 +1,12 @@
+.env
+.dlt/
+data/
+dbt_packages/
+logs/
+target/
+__pycache__/
+*.pyc
+*.pem
+*.sso
+*.ora
+.ssh/

@@ -1,0 +1,10 @@
+pipeline_name: openaq_daily_file
+table_name: raw_openaq_measurements_dlt
+write_disposition: append
+pipelines_dir: data/dlt_pipelines
+primary_key:
+  - city_name
+  - location_id
+  - sensor_id
+  - measured_at
+  - parameter_name

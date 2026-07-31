@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: "{{ var('raw_schema', target.schema) }}"
+    tables:
+      - name: raw_openaq_measurements
+        identifier: "{{ var('raw_table_identifier', 'RAW_OPENAQ_MEASUREMENTS_DLT') }}"
+        description: Raw OpenAQ measurements loaded by the configured ingestion loader.
+        columns:
+          - name: city_name
+            tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: ["New York City", "Jersey City"]
+          - name: location_id
+            tests:
+              - not_null
+          - name: sensor_id
+            tests:
+              - not_null
+          - name: measured_at
+            tests:
+              - not_null
+          - name: parameter_name
+            tests:
+              - not_null
+          - name: measurement_value
